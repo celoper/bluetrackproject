@@ -110,22 +110,20 @@ class AppLocalizations {
       'p01.minOne': 'Pilih minimal satu',
 
       // --- Auth (P02) ---
-      // The title lives in the body heading, not the app bar, so there is one
-      // clear anchor per step instead of two competing ones.
-      'auth.email.title': 'Selamat datang kembali',
-      'auth.email.subtitle':
-          'Masuk untuk melihat proyek dan donasi yang Anda dukung.',
+      // The title lives in the body heading, not the app bar. Email and phone
+      // share one page, so the heading is not tied to either field.
+      'auth.title': 'Selamat datang kembali',
+      'auth.subtitle': 'Masuk dengan email atau nomor telepon Anda.',
       'auth.email.label': 'Email',
       'auth.email.hint': 'nama@email.com',
       'auth.email.invalid': 'Format email tidak valid',
-      'auth.phone.title': 'Nomor telepon Anda',
-      'auth.phone.subtitle': 'Kami akan mengirim kode verifikasi ke nomor ini.',
+      'auth.or': 'ATAU',
       'auth.phone.label': 'Nomor telepon',
       'auth.phone.hint': '8123456789',
       'auth.phone.invalid': 'Nomor telepon tidak valid',
-      'auth.sendCode': 'Kirim Kode',
+      'auth.identifier.missing': 'Masukkan email atau nomor telepon.',
       'auth.otp.title': 'Masukkan kode verifikasi',
-      'auth.otp.subtitle': 'Kode dikirim ke {phone}',
+      'auth.otp.subtitle': 'Kode dikirim ke {target}',
       'auth.otp.mismatch': 'Kode tidak cocok',
       'auth.otp.attemptsLeft': 'Sisa percobaan: {n}',
       'auth.otp.locked':
@@ -355,7 +353,9 @@ class AppLocalizations {
 
       // --- Donation (P06, confirmation & result) ---
       'p06_confirm_title': 'Konfirmasi Donasi',
-      'p06_confirm_big_text': '{amount} → 100% ke {project}',
+      'p06_confirm_donation_label': 'DONASI ANDA',
+      'p06_confirm_project_badge': '100% UNTUK PROYEK',
+      'p06_confirm_platform_badge': '100% UNTUK OPERASIONAL PLATFORM',
       'p06_confirm_min_hint': 'Minimal donasi {amount}',
       'p06_confirm_summary_title': 'Ringkasan donasi',
       'p06_confirm_amount': 'Nominal',
@@ -743,22 +743,20 @@ class AppLocalizations {
       'p01.minOne': 'Pick at least one',
 
       // --- Auth (P02) ---
-      // The title lives in the body heading, not the app bar, so there is one
-      // clear anchor per step instead of two competing ones.
-      'auth.email.title': 'Welcome back',
-      'auth.email.subtitle':
-          'Sign in to see the projects and donations you support.',
+      // The title lives in the body heading, not the app bar. Email and phone
+      // share one page, so the heading is not tied to either field.
+      'auth.title': 'Welcome back',
+      'auth.subtitle': 'Sign in with your email or phone number.',
       'auth.email.label': 'Email',
       'auth.email.hint': 'name@email.com',
       'auth.email.invalid': 'Invalid email format',
-      'auth.phone.title': 'Your phone number',
-      'auth.phone.subtitle': "We'll send a verification code to this number.",
+      'auth.or': 'OR',
       'auth.phone.label': 'Phone number',
       'auth.phone.hint': '8123456789',
       'auth.phone.invalid': 'Invalid phone number',
-      'auth.sendCode': 'Send Code',
+      'auth.identifier.missing': 'Enter your email or phone number.',
       'auth.otp.title': 'Enter verification code',
-      'auth.otp.subtitle': 'Code sent to {phone}',
+      'auth.otp.subtitle': 'Code sent to {target}',
       'auth.otp.mismatch': "Code doesn't match",
       'auth.otp.attemptsLeft': 'Attempts left: {n}',
       'auth.otp.locked': 'Too many attempts. Resend the code to continue.',
@@ -984,7 +982,9 @@ class AppLocalizations {
 
       // --- Donation (P06, confirmation & result) ---
       'p06_confirm_title': 'Confirm Donation',
-      'p06_confirm_big_text': '{amount} → 100% to {project}',
+      'p06_confirm_donation_label': 'YOUR DONATION',
+      'p06_confirm_project_badge': '100% GOES TO THE PROJECT',
+      'p06_confirm_platform_badge': '100% GOES TO PLATFORM OPERATIONS',
       'p06_confirm_min_hint': 'Minimum donation {amount}',
       'p06_confirm_summary_title': 'Donation summary',
       'p06_confirm_amount': 'Amount',
