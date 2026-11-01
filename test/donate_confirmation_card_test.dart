@@ -140,4 +140,29 @@ void main() {
     expect(tester.takeException(), isNull);
     expect(find.byKey(_cardKey), findsOneWidget);
   });
+
+  testWidgets('nominal panjang tetap satu baris di dalam kartu', (
+    tester,
+  ) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(320, 700);
+    addTearDown(tester.view.reset);
+
+    await pumpConfirmation(tester, store: storeWith(amount: 999999999));
+
+    expect(tester.takeException(), isNull);
+
+    final card = tester.getRect(find.byKey(_cardKey));
+    final amount = tester.getRect(
+      find.descendant(
+        of: find.byKey(_cardKey),
+        matching: find.text('Rp999.999.999'),
+      ),
+    );
+
+    // One line at 30sp is ~35dp tall; wrapping would make it roughly double.
+    expect(amount.height, lessThan(50));
+    expect(amount.left, greaterThanOrEqualTo(card.left));
+    expect(amount.right, lessThanOrEqualTo(card.right));
+  });
 }

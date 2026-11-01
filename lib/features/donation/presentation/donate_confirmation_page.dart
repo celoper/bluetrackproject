@@ -483,15 +483,18 @@ class _BigConfirmationCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 6),
-          Text(
-            amount,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 30,
-              height: 1.15,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -0.4,
-              color: AppColors.oceanDeep,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              amount,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 30,
+                height: 1.15,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.4,
+                color: AppColors.oceanDeep,
+              ),
             ),
           ),
           const SizedBox(height: 12),
