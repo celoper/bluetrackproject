@@ -18,13 +18,16 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final signedIn = AuthController.instance.signedIn;
-
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('nav.profile'))),
       body: ListenableBuilder(
         listenable: AuthController.instance,
         builder: (context, _) {
+          // Read inside the builder: the shell keeps this tab alive, so a value
+          // captured in the outer build would stay `false` after sign-in and
+          // the sign-out row would never appear.
+          final signedIn = AuthController.instance.signedIn;
+
           return Column(
             children: [
               Padding(
