@@ -353,7 +353,9 @@ class AppLocalizations {
 
       // --- Donation (P06, confirmation & result) ---
       'p06_confirm_title': 'Konfirmasi Donasi',
-      'p06_confirm_big_text': '{amount} → 100% ke {project}',
+      'p06_confirm_donation_label': 'DONASI ANDA',
+      'p06_confirm_project_badge': '100% UNTUK PROYEK',
+      'p06_confirm_platform_badge': '100% UNTUK OPERASIONAL PLATFORM',
       'p06_confirm_min_hint': 'Minimal donasi {amount}',
       'p06_confirm_summary_title': 'Ringkasan donasi',
       'p06_confirm_amount': 'Nominal',
@@ -980,7 +982,9 @@ class AppLocalizations {
 
       // --- Donation (P06, confirmation & result) ---
       'p06_confirm_title': 'Confirm Donation',
-      'p06_confirm_big_text': '{amount} → 100% to {project}',
+      'p06_confirm_donation_label': 'YOUR DONATION',
+      'p06_confirm_project_badge': '100% GOES TO THE PROJECT',
+      'p06_confirm_platform_badge': '100% GOES TO PLATFORM OPERATIONS',
       'p06_confirm_min_hint': 'Minimum donation {amount}',
       'p06_confirm_summary_title': 'Donation summary',
       'p06_confirm_amount': 'Amount',
